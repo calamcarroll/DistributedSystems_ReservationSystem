@@ -1,0 +1,61 @@
+<div class="container">
+    <h2>Registration Form</h2>
+    <form class="form-horizontal" ng-submit="register.regUser(regData);">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Username">Username:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="Username" placeholder="Username" name="email" ng-model="register.regData.username">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" ng-model="register.regData.password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="fName">First Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="fName" placeholder="First Name" name="fName" ng-model="register.regData.fName">
+            </div>
+        </div>
+        <div class="form-group">
+        <label class="control-label col-sm-2" for="lName">Last Name:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="lName" placeholder="Last Name" name="lName" ng-model="register.regData.lName">
+        </div>
+    </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="PhoneNum">Phone Number:</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="PhoneNum" placeholder="Phone Number" name="PhoneNum" ng-model="register.regData.mobileNo">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email" ng-model="register.regData.email">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label><input type="checkbox" name="isAdmin" ng-model="register.regData.isAdmin">Is Admin</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Sign me up!</button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <div class="row show-hide-message" ng-show="register.Success">
+        <div class="alert alert-success">{{register.Success}}</div>
+    </div>
+    <br>
+    <div class="row show-hide-message" ng-show="register.error">
+        <div class="alert alert-danger">{{register.error}}</div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div ng-controller="reservationCtrl as res">
+    <input class="form-control" id="myInput" type="text" ng-model="test" placeholder="Search..">
+    <br>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Duration</th>
+            <th>Notes</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="reservation in reservationtList|filter:test">
+
+        <td>{{reservation.date|date}}</td>
+        <td>{{reservation.duration}} hour's</td>
+        <td>{{reservation.notes}}</td>
+        <td> <button type="button" class="btn btn-danger" ng-click="res.delete(reservation._id)">
+            <span class="fa fa-trash"></span>
+        </button></td>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,9 @@
+{
+  "name": "DistributedSystems_ReservationSystem",
+  "version": "0.0.1",
+  "dependencies": {
+    "jsonwebtoken": "latest",
+    "moment": "^2.20.1",
+    "bcrypt-nodejs": "latest"
+  }
+}

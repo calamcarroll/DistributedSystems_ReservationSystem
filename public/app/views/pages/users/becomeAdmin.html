@@ -1,0 +1,26 @@
+<style>
+    #userBtn{
+        margin-bottom: 20px;
+    }
+</style>
+<div ng-controller="loginCtrl as log">
+    <button class="btn btn-success" id="userBtn" ng-click="log.usersToBeAdmin();">Load Requests</button>
+    <br>
+
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>User</th>
+            <th>Make Admin</th>
+        </tr>
+        </thead>
+        <tbody ng-repeat="user in userAdminList track by $index">
+
+        <td>{{user.username}}</td>
+        <td> <button type="button" class="btn btn-info" ng-click="log.makeAdmin(user._id)">
+            <span class="fa fa-unlock"></span>
+        </button>
+        </td>
+        </tbody>
+    </table>
+</div>

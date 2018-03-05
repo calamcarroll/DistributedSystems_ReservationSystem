@@ -1,0 +1,28 @@
+
+<h2>Reservation Finder</h2>
+<p>This page is where you can find all Reservations made</p>
+<br>
+
+    <div ng-controller="reservationCtrl as res">
+
+        <input class="form-control" id="myInput" type="text" ng-model="test" placeholder="Search..">
+        <br>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                    <th>Date</th>
+                    <th>Duration</th>
+                    <th>Notes</th>
+            </tr>
+            </thead>
+            <tbody ng-repeat="UserReservation in reservationtList|filter:test">
+
+                <td>{{UserReservation.date|date}}</td>
+                <td>{{UserReservation.duration}} hours</td>
+                <td>{{UserReservation.notes}}</td>
+            </tbody>
+        </table>
+    </div>
+
+
+
